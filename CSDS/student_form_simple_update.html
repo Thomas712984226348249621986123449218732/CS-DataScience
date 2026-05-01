@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Student Form</title></head>
+<body>
+
+<h1>Student Update</h1>
+
+<form action="/update_student_changed" method="GET">
+
+
+<label>First Name:
+  <input type="text" name="first_name" maxlength="50" required value="{{ student[1] }}">
+</label><br><br>
+
+<label>Last Name:
+  <input type="text" name="last_name" maxlength="50" required value="{{ student[2] }}">
+</label><br><br>
+
+<label>Grade Level:
+  <input type="number" name="grade_level" required value="{{ student[3] }}">
+</label><br><br>
+
+<label>Email:
+  <input type="email" name="email" maxlength="100" value="{{ student[4] }}">
+</label><br><br>
+
+<label>Date:
+  <input type="date" name="enrollment_date" value="{{ student[5].strftime('%Y-%m-%d') }}">
+</label><br><br>
+
+        <input type="hidden" name="student_id" value="{{ student[0] }}">
+        <input type="submit" value="Update">
+    </form>
+
+    </body>
+    </html>
+
+
+
+    
+    
